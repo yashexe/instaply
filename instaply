@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Instaply CLI entrypoint. Bootstraps the virtualenv on first run,
+# then hands off to the Python CLI. Try: ./instaply --help
+set -euo pipefail
+# Resolve symlinks so this works when linked into a PATH directory.
+cd "$(dirname "$(readlink -f "$0")")"
+
+if [ ! -x .venv/bin/python ]; then
+  echo "First run: creating virtualenv and installing dependencies..." >&2
+  python3.13 -m venv .venv
+  .venv/bin/pip install -q -r requirements.txt
+fi
+
+exec .venv/bin/python -m src.cli "$@"

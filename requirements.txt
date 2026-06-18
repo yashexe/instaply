@@ -1,0 +1,41 @@
+# Web framework
+fastapi==0.115.12
+uvicorn[standard]==0.34.3
+
+# Database
+aiosqlite==0.21.0
+
+# Scheduling
+apscheduler==3.11.0
+
+# HTTP client
+httpx==0.28.1
+
+# Data validation & settings
+pydantic==2.13.4
+pydantic-settings==2.14.1
+
+# Environment
+python-dotenv==1.1.0
+
+# LLM providers
+openai==1.82.0
+anthropic==0.52.0
+google-genai==1.14.0
+
+# Logging
+structlog==25.4.0
+
+# File uploads
+python-multipart==0.0.20
+
+# HTML parsing
+beautifulsoup4==4.13.4
+
+# Email
+aiosmtplib==3.0.2
+jinja2==3.1.6
+
+# Embeddings (local semantic matching)
+sentence-transformers==4.1.0
+numpy>=1.26
